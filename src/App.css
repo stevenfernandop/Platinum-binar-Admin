@@ -84,7 +84,7 @@ body {
   background-color: #cfd4ed;
 }
 .rowTitle {
-  padding-top: 65px;
+  padding-top: 45px;
 }
 .padm {
   font-family: "Arial";
@@ -113,7 +113,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .dataP2 {
   font-family: "Arial";
@@ -167,4 +167,7 @@ body {
 }
 .tblTdi {
   margin-top: 200px;
+}
+.delEdit{
+  width: 120px;
 }

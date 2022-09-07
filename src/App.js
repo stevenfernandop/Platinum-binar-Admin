@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboards";
 import Car from "./pages/Car";
 import Home from "./pages/Home";
 import ANCar from "./pages/AddToCar";
+import EditCarPage from "./pages/EditCarPage";
 // import "~slick-carousel/slick/slick.css";
 // import "~slick-carousel/slick/slick-theme.css";
 
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route exact path="/ancar">
             <ANCar />
+          </Route>
+          <Route exact path="/editcar">
+            <EditCarPage />
           </Route>
           {/* <Route path="/editcar">
             <Detail />

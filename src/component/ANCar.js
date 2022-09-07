@@ -24,7 +24,7 @@ function ANCar() {
           </Row>
           <Row className="rowTitle2 mt-5 ms-3 my-auto ">
             <Col md className="d-flex justify-content-between mb-4">
-              <h1 className="dataP mt-3">Add New Car</h1>
+              <h1 className="dataP ">Add New Car</h1>
             </Col>
             <Row md={12} className="g-2 me-2 mb-5">
               <Card>
@@ -60,7 +60,7 @@ function ANCar() {
                 </Form>
               </Card>
               <Row>
-                <Col className="d-flex  fw-bold mt-5 gap-3">
+                <Col className="d-flex  fw-bold mt-5 gap-3" style={{ marginTop: "50px" }}>
                   <Button className="">Cancel</Button>
                   <Button className="">Save </Button>
                 </Col>

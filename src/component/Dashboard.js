@@ -36,7 +36,7 @@ function Dashboard() {
           </Row>
           <Row className="rowTitle2 mt-5 ms-3 ">
             <Col className="d-flex gap-2 align-items-center">
-              <div className="mt-1" style={{ width: "4px", height: "24px", backgroundColor: "blue" }}></div>
+              <div className="" style={{marginTop:"-10px", width: "4px", height: "24px", backgroundColor: "blue" }}></div>
               <p className="dataP">Rented Car Data Visualization</p>
             </Col>
             <Row>

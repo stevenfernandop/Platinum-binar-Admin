@@ -37,20 +37,20 @@ function Cars() {
           </Row>
           <Row className="rowTitle2 mt-5 ms-3 my-auto">
             <Col md className="d-flex justify-content-between mb-4">
-              <h1 className="dataP mt-3">List Cars</h1>
+              <h1 className="dataP ">List Cars</h1>
               <Link to="/ancar">
-              <Button className="mt-2 p-2 " style={{ height: "36px", backgroundColor: "blue", lineHeight: "10px"}}>
-                + Add New Car
-              </Button>
+                <Button className=" p-2 " style={{ height: "36px", backgroundColor: "blue", lineHeight: "10px" }}>
+                  + Add New Car
+                </Button>
               </Link>
             </Col>
 
             <Row>
               <Col md className="d-flex gap-2 mb-3">
-                <Button>All</Button>
-                <Button>2-4 people</Button>
-                <Button>4-6 people</Button>
-                <Button>6-8 people</Button>
+                <Button variant="outline-primary ">All</Button>
+                <Button variant="outline-primary">2-4 people</Button>
+                <Button variant="outline-primary">4-6 people</Button>
+                <Button variant="outline-primary">6-8 people</Button>
               </Col>
             </Row>
             <Row md={12} className="g-2 me-2">
@@ -64,8 +64,10 @@ function Cars() {
                     <Card.Subtitle className="pt-3">Updated at 4 Apr 2022, 09.00</Card.Subtitle>
 
                     <Col className="d-flex justify-content-between fw-bold mt-3 gap-3">
-                      <Button className="w-50">Delete</Button>
-                      <Button className="w-50">Edit </Button>
+                      <Button className="delEdit">Delete</Button>
+                      <Link to="/editcar">
+                        <Button className="delEdit">Edit </Button>
+                      </Link>
                     </Col>
                   </Card.Body>
                 </Card>
@@ -80,8 +82,10 @@ function Cars() {
                     <Card.Subtitle className="pt-3">Updated at 4 Apr 2022, 09.00</Card.Subtitle>
 
                     <Col className="d-flex justify-content-between fw-bold mt-3 gap-3">
-                      <Button className="w-50">Delete</Button>
-                      <Button className="w-50">Edit </Button>
+                      <Button className="delEdit">Delete</Button>
+                      <Link to="/editcar">
+                        <Button className="delEdit">Edit </Button>
+                      </Link>
                     </Col>
                   </Card.Body>
                 </Card>
@@ -96,8 +100,10 @@ function Cars() {
                     <Card.Subtitle className="pt-3">Updated at 4 Apr 2022, 09.00</Card.Subtitle>
 
                     <Col className="d-flex justify-content-between fw-bold mt-3 gap-3">
-                      <Button className="w-50">Delete</Button>
-                      <Button className="w-50">Edit </Button>
+                      <Button className="delEdit">Delete</Button>
+                      <Link to="/editcar">
+                        <Button className="delEdit">Edit </Button>
+                      </Link>
                     </Col>
                   </Card.Body>
                 </Card>

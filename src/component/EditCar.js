@@ -8,7 +8,7 @@ function EditCar() {
       <Row className="d-flex me-5">
         <Col md={2}>
           <div className="side2 bg-white" style={{ width: "220px", height: "834px", marginLeft: "-20px", paddingTop: "20px" }}>
-            <p className="dash-judul pt-1">Cars</p>
+            <p className="dash-judul ">Cars</p>
             <p className="dash-judul2">List Cars</p>
           </div>
         </Col>
@@ -22,7 +22,7 @@ function EditCar() {
               <p className="padm2">Edit Car</p>
             </Col>
           </Row>
-          <Row className="rowTitle2 mt-5 ms-3 my-auto ">
+          <Row className="rowTitle2 mt-4 ms-3 my-auto ">
             <Col md className="d-flex justify-content-between mb-4">
               <h1 className="dataP mt-3">Edit Car</h1>
             </Col>

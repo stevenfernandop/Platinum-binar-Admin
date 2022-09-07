@@ -10,6 +10,7 @@ import iconDashb from "../assets/img/dashb.png";
 import iconCar from "../assets/img/fi_truck.png";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton"
+import { Link } from "react-router-dom";
 
 function NavbarADM() {
   return (
@@ -26,7 +27,7 @@ function NavbarADM() {
             </Nav>
             <Form className="d-flex">
               <Form.Control type="search" placeholder="Search" className="me-2 " aria-label="Search" />
-              <Button variant="outline-success" style={{ marginLeft: "-10px" }}>
+              <Button variant="outline-primary" style={{ marginLeft: "-10px" }}>
                 Search
               </Button>
             </Form>
@@ -44,12 +45,16 @@ function NavbarADM() {
           <>
           <img src={iconBox} className="m-3  "></img>
           <div className=" pt-3  bg-primary">
+            <Link to="/dashboard">
             <img src={iconDashb} className="iconAdm" ></img>
-            <p className="iconDesc pt-1 pb-3">Dashboard</p>
+              <p className="iconDesc pt-1 pb-3">Dashboard</p>
+            </Link>
           </div>
           <div className="pt-3 bg-primary" style={{ marginTop:"-23px"}}>
+          <Link to="/car">
           <img src={iconCar} className="iconAdm"></img>
           <p className="iconDesc pt-1 pb-3">Cars</p>
+          </Link>
           </div>
           </>
 
