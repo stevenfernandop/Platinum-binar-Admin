@@ -3,7 +3,9 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: Arial;
+ 
 }
+
 
 /* CSS signIn page ADMIN */
 .contSignIn {
@@ -42,9 +44,10 @@ body {
   display: none;
 }
 .iconAdm {
-  margin: auto;
+  margin:  0px auto;
   display: flex;
   flex-direction: column;
+
 }
 .iconDesc {
   color: white;
@@ -54,16 +57,31 @@ body {
   font-size: 12px;
   line-height: 18px;
   text-align: center;
-  margin-bottom: 23px;
+  /* margin-bottom: 23px; */
+}
+.side {
+  width: 70px;
+  height: 902px;
+  background-color: blue;
+  margin-top: -60px;
+}
+#dashboard {
+  background-color: #e8e3e3;
+  margin-left: 70px;
+  margin-top: -842px;
+}
+.sideDashboard {
+  background-color: #ffffff;
+  height: 842px;
+  width: 220px;
 }
 .dash-judul {
   font-family: "Arial";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 20px;
   color: #8a8a8a;
-  margin: 22px 70px 78px 12px;
+  margin-top: 40px;
 }
 .dash-judul2 {
   font-family: "Arial";
@@ -73,18 +91,19 @@ body {
   line-height: 20px;
   color: #151515;
   background-color: #cfd4ed;
-  /* margin: 0px 0px 70px 0px; */
-  padding-left: 12px;
-  margin-top: -33px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  overflow: hidden;
+  margin-top: 43px;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 13px;
 }
-.dash-judul2:active {
+/* .dash-judul2:active {
   background-color: #cfd4ed;
-}
+} */
 .rowTitle {
   padding-top: 45px;
+}
+.line1{
+  margin-top: 42px;
 }
 .padm {
   font-family: "Arial";
@@ -113,8 +132,13 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  margin-top: 0px;
+  margin-top: 3px;
 }
+.icondel{
+  padding-right: 5px;
+  padding-bottom: 3px;
+}
+
 .dataP2 {
   font-family: "Arial";
   font-style: normal;
@@ -168,6 +192,6 @@ body {
 .tblTdi {
   margin-top: 200px;
 }
-.delEdit{
+.delEdit {
   width: 120px;
 }

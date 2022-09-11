@@ -1,7 +1,10 @@
 import { Container, Row, Col, Button, Form, Card, Image } from "react-bootstrap";
 import Select from "react-select";
 import vektor from "../assets/img/Vector.png";
-import Pagination from "react-bootstrap/Pagination";
+import iconDelete from "../assets/img/del.png";
+import fi_edit from "../assets/img/fi_edit.png";
+import fi_clock from "../assets/img/fi_clock.png";
+import fi_users from "../assets/img/fi_users.png";
 import { Link } from "react-router-dom";
 
 function Cars() {
@@ -19,97 +22,120 @@ function Cars() {
     { value: "4", label: "4" },
   ];
   return (
-    <Container fluid id="dashboard" style={{ marginLeft: "80px", backgroundColor: "#E5E5E5", marginTop: "-834px" }}>
-      <Row className="d-flex me-5">
-        <Col md={2}>
-          <div className="side2 bg-white" style={{ width: "220px", height: "834px", marginLeft: "-20px", paddingTop: "20px" }}>
-            <p className="dash-judul pt-1">Cars</p>
-            <p className="dash-judul2">List Cars</p>
+    <Container fluid id="dashboard">
+      <Row className="d-flex">
+        <Col className="sideDashboard">
+          <div className="side2 bg-white">
+            <p className="dash-judul">CARS</p>
+            <p className="dash-judul2">List Car</p>
           </div>
         </Col>
-        <Col md={10}>
-          <Row className="rowTitle ms-2">
+        <Col>
+          <Col className="line1 d-flex gap-2 align-items-center">
+            <p className="padm ">Cars</p>
+            <Image src={vektor} className="vektoradm"></Image>
+            <p className="padm2">List Car</p>
+          </Col>
+          <Card className=" ms-1 me-5" style={{ backgroundColor: "#e8e3e3", paddingLeft: "10px", marginTop: "45px", width: "950px", border: "none" }}>
             <Col className="d-flex gap-2 align-items-center">
-              <p className="padm ">Cars</p>
-              <Image src={vektor} className="vektoradm"></Image>
-              <p className="padm2">List Cars</p>
-            </Col>
-          </Row>
-          <Row className="rowTitle2 mt-5 ms-3 my-auto">
-            <Col md className="d-flex justify-content-between mb-4">
-              <h1 className="dataP ">List Cars</h1>
+              <p className="dataP fs-5">List Car</p>
               <Link to="/ancar">
-                <Button className=" p-2 " style={{ height: "36px", backgroundColor: "blue", lineHeight: "10px" }}>
+                <Button className=" p-2 " style={{ height: "36px", backgroundColor: "blue", lineHeight: "10px", marginBottom:"10px", marginLeft:"730px" }}>
                   + Add New Car
                 </Button>
               </Link>
             </Col>
+            
+            <Col md className="d-flex gap-2 mb-3 mt-1">
+              <Button variant="outline-primary ">All</Button>
+              <Button variant="outline-primary">2-4 people</Button>
+              <Button variant="outline-primary">4-6 people</Button>
+              <Button variant="outline-primary">6-8 people</Button>
+            </Col>
+            <Col className="d-flex gap-4">
+              <Card className="mb-3">
+                <Card.Img className="p-4" variant="top" src="https://placeimg.com/200/100/animals" alt="Gambar tidak tersedia" />
+                <Card.Body>
+                  <Card.Text className="mb-1">Nama/Tipe Mobil </Card.Text>
+                  <Card.Subtitle className="fw-bold pt-2">Rp 500.000 / hari</Card.Subtitle>
+                  <Card.Subtitle className="pt-3">
+                    <img className="icondel" src={fi_users}></img>6-8 people
+                  </Card.Subtitle>
+                  <Card.Subtitle className="pt-3">
+                    <img className="iconupdate me-1" src={fi_clock}></img>
+                    Updated at 4 Apr 2022, 09.00
+                  </Card.Subtitle>
 
-            <Row>
-              <Col md className="d-flex gap-2 mb-3">
-                <Button variant="outline-primary ">All</Button>
-                <Button variant="outline-primary">2-4 people</Button>
-                <Button variant="outline-primary">4-6 people</Button>
-                <Button variant="outline-primary">6-8 people</Button>
-              </Col>
-            </Row>
-            <Row md={12} className="g-2 me-2">
-              <Col md={4}>
-                <Card className="mb-3">
-                  <Card.Img className="p-4" variant="top" src="https://placeimg.com/200/100/animals" alt="Gambar tidak tersedia" />
-                  <Card.Body>
-                    <Card.Text className="mb-1">Nama/Tipe Mobil </Card.Text>
-                    <Card.Subtitle className="fw-bold pt-2">Rp 500.000 / hari</Card.Subtitle>
-                    <Card.Subtitle className="pt-3">6-8 people</Card.Subtitle>
-                    <Card.Subtitle className="pt-3">Updated at 4 Apr 2022, 09.00</Card.Subtitle>
+                  <Col className="d-flex justify-content-between fw-bold mt-3 gap-3">
+                    <Button className="delEdit my-auto fw-bold" variant="outline-danger">
+                      <img className="icondel" src={iconDelete}></img>
+                      Delete
+                    </Button>
+                    <Link to="/editcar">
+                      <Button className="delEdit my-auto fw-bold" variant="success">
+                        <img className="icondel" src={fi_edit}></img>
+                        Edit
+                      </Button>
+                    </Link>
+                  </Col>
+                </Card.Body>
+              </Card>
+              <Card className="mb-3 ">
+                <Card.Img className="p-4" variant="top" src="https://placeimg.com/200/100/animals" alt="Gambar tidak tersedia" />
+                <Card.Body>
+                  <Card.Text className="mb-1">Nama/Tipe Mobil </Card.Text>
+                  <Card.Subtitle className="fw-bold pt-2">Rp 500.000 / hari</Card.Subtitle>
+                  <Card.Subtitle className="pt-3">
+                    <img className="icondel" src={fi_users}></img>6-8 people
+                  </Card.Subtitle>
+                  <Card.Subtitle className="pt-3">
+                    <img className="iconupdate me-1" src={fi_clock}></img>
+                    Updated at 4 Apr 2022, 09.00
+                  </Card.Subtitle>
 
-                    <Col className="d-flex justify-content-between fw-bold mt-3 gap-3">
-                      <Button className="delEdit">Delete</Button>
-                      <Link to="/editcar">
-                        <Button className="delEdit">Edit </Button>
-                      </Link>
-                    </Col>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={4}>
-                <Card className="mb-3">
-                  <Card.Img className="p-4" variant="top" src="https://placeimg.com/200/100/animals" alt="Gambar tidak tersedia" />
-                  <Card.Body>
-                    <Card.Text className="mb-1">Nama/Tipe Mobil </Card.Text>
-                    <Card.Subtitle className="fw-bold pt-2">Rp 500.000 / hari</Card.Subtitle>
-                    <Card.Subtitle className="pt-3">6-8 people</Card.Subtitle>
-                    <Card.Subtitle className="pt-3">Updated at 4 Apr 2022, 09.00</Card.Subtitle>
+                  <Col className="d-flex justify-content-between fw-bold mt-3 gap-3">
+                    <Button className="delEdit my-auto fw-bold" variant="outline-danger">
+                      <img className="icondel" src={iconDelete}></img>
+                      Delete
+                    </Button>
+                    <Link to="/editcar">
+                      <Button className="delEdit my-auto fw-bold" variant="success">
+                        <img className="icondel" src={fi_edit}></img>
+                        Edit
+                      </Button>
+                    </Link>
+                  </Col>
+                </Card.Body>
+              </Card>
+              <Card className="mb-3 ">
+                <Card.Img className="p-4" variant="top" src="https://placeimg.com/200/100/animals" alt="Gambar tidak tersedia" />
+                <Card.Body>
+                  <Card.Text className="mb-1">Nama/Tipe Mobil </Card.Text>
+                  <Card.Subtitle className="fw-bold pt-2">Rp 500.000 / hari</Card.Subtitle>
+                  <Card.Subtitle className="pt-3">
+                    <img className="icondel" src={fi_users}></img>6-8 people
+                  </Card.Subtitle>
+                  <Card.Subtitle className="pt-3">
+                    <img className="iconupdate me-1" src={fi_clock}></img>
+                    Updated at 4 Apr 2022, 09.00
+                  </Card.Subtitle>
 
-                    <Col className="d-flex justify-content-between fw-bold mt-3 gap-3">
-                      <Button className="delEdit">Delete</Button>
-                      <Link to="/editcar">
-                        <Button className="delEdit">Edit </Button>
-                      </Link>
-                    </Col>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={4}>
-                <Card className="mb-3">
-                  <Card.Img className="p-4" variant="top" src="https://placeimg.com/200/100/animals" alt="Gambar tidak tersedia" />
-                  <Card.Body>
-                    <Card.Text className="mb-1">Nama/Tipe Mobil </Card.Text>
-                    <Card.Subtitle className="fw-bold pt-2">Rp 500.000 / hari</Card.Subtitle>
-                    <Card.Subtitle className="pt-3">6-8 people</Card.Subtitle>
-                    <Card.Subtitle className="pt-3">Updated at 4 Apr 2022, 09.00</Card.Subtitle>
-
-                    <Col className="d-flex justify-content-between fw-bold mt-3 gap-3">
-                      <Button className="delEdit">Delete</Button>
-                      <Link to="/editcar">
-                        <Button className="delEdit">Edit </Button>
-                      </Link>
-                    </Col>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-          </Row>
+                  <Col className="d-flex justify-content-between fw-bold mt-3 gap-3">
+                    <Button className="delEdit my-auto fw-bold" variant="outline-danger">
+                      <img className="icondel" src={iconDelete}></img>
+                      Delete
+                    </Button>
+                    <Link to="/editcar">
+                      <Button className="delEdit my-auto fw-bold" variant="success">
+                        <img className="icondel" src={fi_edit}></img>
+                        Edit
+                      </Button>
+                    </Link>
+                  </Col>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Card>
         </Col>
       </Row>
     </Container>
